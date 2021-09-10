@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+   <head>
+        <title>MB book store form customer</title>
+		<style>
+		div{
+		background-color:#42f542;
+		color:#070c4a;
+		text-align:justify;
+		padding:20px;
+		}
+		h1{
+		color:#060212;
+		}
+		legend{
+		color:#021204;
+		}
+		</style>
+<script>
+function validate(){
+  var n=document.getElementById("fname");
+  var e=document.getElementById("email");
+  var ln=document.getElementById("lname");
+  var mn=document.getElementById("mn");
+  var q=document.getElementById("q");
+ var address=document.getElementById("address");
+ var pin=document.getElementById("pin");
+ var city=document.getElementById("city");
+ var cn=document.getElementById("cn");
+ var cv=document.getElementById("cvv");
+ var vt=document.getElementById("vt");
+ if(n.value==""){
+  alert("Name is not entered");
+  n.style.border="2px solid red";
+  return false;
+   } 
+else if(e.value=="")
+   {
+   alert("email is not entered");
+   e.style.border="2px solid red";
+   return false;
+   }
+  else if(ln.value=="")
+   {
+   alert("last name is not entered");
+   ln.style.border="2px solid red";
+   return false;
+   }
+    else if(mn.value=="")
+   {
+   alert("mobile number is not entered");
+   mn.style.border="2px solid red";
+   return false;
+   }
+    else if(q.value=="")
+   {
+   alert("quantity is not entered");
+   q.style.border="2px solid red";
+   return false;
+   }
+     else if(address.value=="")
+   {
+   alert("address is not entered");
+   address.style.border="2px solid red";
+   return false;
+   }
+     else if(pin.value=="")
+   {
+   alert("pin is not entered");
+   pin.style.border="2px solid red";
+   return false;
+   }
+     else if(city.value=="")
+   {
+   alert("city is not entered");
+   city.style.border="2px solid red";
+   return false;
+   }
+     else if(cn.value=="")
+   {
+   alert("card number is not entered");
+   cn.style.border="2px solid red";
+   return false;
+   }
+     else if(cv.value=="")
+   {
+   alert("cvv is not entered");
+   cv.style.border="2px solid red";
+   return false;
+   }
+     else if(vt.value=="")
+   {
+   alert("valid through is not entered");
+   vt.style.border="2px solid red";
+   return false;
+   }
+   
+}
+
+  
+</script>
+   </head>
+  <body>
+  <h1><center>Book Order</center></h1>
+  <div>
+  <form onsubmit="return validate()" action="mailto:jainys_3@rknec.edu?
+subject=Userdata" method="POST" enctype="text/plain">
+  <fieldset>
+  <legend>Personal info :</legend>
+  First Name: <INPUT TYPE="TEXT" NAME="Fname"
+SIZE="15" MAXLENGTH="25" id="fname" pattern="^[A-Z][a-z]+$" title="enter name in words"><BR><br>
+Last Name: <INPUT TYPE="TEXT" NAME="Lname"
+SIZE="15" MAXLENGTH="25" id="lname" pattern="^[A-Z][a-z]+$" title="enter last name in words"><BR><br>
+Email: <INPUT TYPE="TEXT" NAME="Email"
+SIZE="15" MAXLENGTH="25" id="email" pattern="^([a-z0-9\._]+)@([a-z]+).([a-z]{2,3})$"><BR><br>
+Mobile Number: <INPUT TYPE="TEXT" NAME="Mobile"
+SIZE="15" MAXLENGTH="12" id="mn" pattern"^\+[9][1][7-9][0-9]{9}" value="+91"><BR><br>
+Username(Cust Id): <INPUT TYPE="TEXT" NAME="Uname"
+SIZE="15" MAXLENGTH="25" id="un" pattern="[C][U][S][T][I][D][0-9]{4}"><BR><br>
+</fieldset>
+<fieldset>
+<legend>Book Info</legend>
+Book Name :<br><br>
+<label for="books">Choose Book:</label>
+  <select name="books" id="books" size="1">
+    <option>Give and Take</option>
+    <option>Wings of Fire</option>
+    <option>Spoken English</option>
+    <option >Bible Atlas</option>
+  </select><br><br>
+  Quantity :<input type="number" min="1" id="q"><br><br>
+  </fieldset>
+  <fieldset>
+  <legend>Delivery details</legend>
+  Address :<input type="text" name="address" size="40" id="address"><br><br>
+  Pincode :<input type="text" name="pin" id="pin" pattern="[0-9]{6}"><br><br>
+  City :<input type="text" name="city" id="city"><br><br>
+  Country :<input type="text"  value="India" name="country" disabled><br><br>
+  </fieldset>
+  <fieldset>
+  <legend>Payment Details</legend>
+  Select Card :<br><br><select name="card" size="3" pattern="[0-9]{16}">
+  <option >Credit Card</option>
+    <option>Debit Card</option>
+    <option>Master Card</option>
+	</select><br><br>
+ Card Number :<input type="text" name"cardnum" id="cn"><br><br>
+ CVV :<input type="password" name"cvv" size="3" maxlength="3" id="cvv" pattern="[0-9]{3}"><br><br>
+ Valid Till :<input type="date" name="expiry" id="vt"  max="2030-12-31" min="2010-01-01"><br><br>
+ <input type="submit">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset">
+ </body>
+ </html>

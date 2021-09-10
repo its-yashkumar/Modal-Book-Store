@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type="button"]{
+border-radius:10px;
+background-color:#6d6d6e;
+color:white;
+width:100%;
+border:none;
+}
+tr:hover{
+background-color:#04475c;
+}
+input[type="text"]{
+border-radius:10px;
+}
+div{
+background-color:#6d6d6e;
+width:300px;
+}
+h1{
+color:white;
+}
+table{
+border-collapse:separate;
+border-spacing:0 30px;
+}
+tr{
+background-color:#6d6d6e;
+size=50px;
+}
+.tabl{
+background-color:#1c1c1c;
+}
+input[type="button"]:hover{
+background-color:#72cce8;
+}
+input[type="text"]{
+border-color:white;
+color:white;
+background-color:#6d6d6e;
+}
+img{
+width:50px;
+height:36px;
+}
+
+</style>
+<script>
+function clr(){
+document.getElementById("box").value="";
+}
+function calculate(val){
+var x=document.getElementById("rbox").value;
+if(val==1){
+document.getElementById("dbox").value=x*0.013;}
+else if(val==2){
+document.getElementById("pbox").value=x*0.0098;
+}
+else if(val==3){
+document.getElementById("ebox").value=x*0.011;
+}
+else if(val==4){
+document.getElementById("ybox").value=x*1.47;
+}
+}
+</script>
+</head>
+<body>
+<center>
+<div><h1>Currency converter</h1>
+<div style="background-color:#171717;">
+<table>
+<tr>
+<td><input type="button" value="&#8377" onclick="clr()"
+style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="rbox" placeholder="value.." />
+<td><img src="india.png"></td>
+</td>
+</tr>
+<tr>
+<td><input type="button" value="&#36" onclick="calculate('1')"
+style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="dbox" placeholder="value.." />
+</td>
+<td><img src="usa.png"></td>
+</tr>
+<tr>
+<td><input type="button" value="&#163" onclick="calculate('2')"
+style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="pbox" placeholder="value.." />
+</td>
+<td><img src="uk.png"></td>
+</tr>
+<tr>
+<td><input type="button" value=" &#8364;" onclick="calculate('3')"
+style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="ebox" placeholder="value.." />
+</td>
+<td><img src="eup.png"></td>
+</tr>
+<tr>
+<td><input type="button" value="&#165;" onclick="calculate('4')"
+style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="ybox" placeholder="value.." />
+</td>
+<td><img src="jap.png"></td>
+</tr>
+</div>
+</table>
+</center>
+</div>
+</body>
+</html>
